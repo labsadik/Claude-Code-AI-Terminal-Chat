@@ -1,0 +1,201 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+@layer base {
+  :root {
+    --background: 220 16% 8%;
+    --foreground: 220 10% 85%;
+
+    --card: 220 16% 11%;
+    --card-foreground: 220 10% 85%;
+
+    --popover: 220 16% 11%;
+    --popover-foreground: 220 10% 85%;
+
+    --primary: 25 95% 55%;
+    --primary-foreground: 220 16% 8%;
+
+    --secondary: 220 12% 14%;
+    --secondary-foreground: 220 10% 70%;
+
+    --muted: 220 12% 12%;
+    --muted-foreground: 220 8% 45%;
+
+    --accent: 25 95% 55%;
+    --accent-foreground: 220 16% 8%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 12% 18%;
+    --input: 220 12% 14%;
+    --ring: 25 95% 55%;
+
+    --radius: 0.5rem;
+
+    --terminal-green: 142 70% 45%;
+    --terminal-dim: 220 8% 35%;
+    --terminal-bright: 220 10% 90%;
+    --terminal-cursor: 25 95% 55%;
+    --terminal-user: 200 80% 60%;
+    --terminal-assistant: 25 95% 55%;
+    --terminal-system: 270 60% 65%;
+    --terminal-tool: 160 60% 45%;
+
+    --sidebar-background: 220 16% 6%;
+    --sidebar-foreground: 220 10% 70%;
+    --sidebar-primary: 25 95% 55%;
+    --sidebar-primary-foreground: 220 16% 8%;
+    --sidebar-accent: 220 12% 14%;
+    --sidebar-accent-foreground: 220 10% 70%;
+    --sidebar-border: 220 12% 18%;
+    --sidebar-ring: 25 95% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Highlight.js theme overrides for terminal look */
+.hljs {
+  background: transparent !important;
+  padding: 0 !important;
+}
+
+/* Markdown prose styling */
+.markdown-body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.65;
+  color: hsl(var(--foreground));
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+  color: hsl(var(--terminal-bright));
+}
+
+.markdown-body h1 { font-size: 1.3em; }
+.markdown-body h2 { font-size: 1.15em; }
+.markdown-body h3 { font-size: 1.05em; }
+
+.markdown-body p {
+  margin-bottom: 0.6em;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 1.5em;
+  margin-bottom: 0.6em;
+}
+
+.markdown-body li {
+  margin-bottom: 0.2em;
+}
+
+.markdown-body code:not(pre code) {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85em;
+  background: hsl(var(--secondary));
+  border: 1px solid hsl(var(--border));
+  border-radius: 4px;
+  padding: 0.15em 0.4em;
+  color: hsl(var(--accent));
+}
+
+.markdown-body pre {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8em;
+  background: hsl(220 16% 6%);
+  border: 1px solid hsl(var(--border));
+  border-radius: 6px;
+  padding: 0.8em 1em;
+  margin: 0.6em 0;
+  overflow-x: auto;
+  position: relative;
+}
+
+.markdown-body pre code {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  font-size: 1em;
+}
+
+.markdown-body blockquote {
+  border-left: 3px solid hsl(var(--accent));
+  padding-left: 1em;
+  margin: 0.6em 0;
+  color: hsl(var(--muted-foreground));
+  font-style: italic;
+}
+
+.markdown-body a {
+  color: hsl(var(--terminal-user));
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.markdown-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.6em 0;
+  font-size: 0.9em;
+}
+
+.markdown-body th,
+.markdown-body td {
+  border: 1px solid hsl(var(--border));
+  padding: 0.4em 0.8em;
+  text-align: left;
+}
+
+.markdown-body th {
+  background: hsl(var(--secondary));
+  font-weight: 600;
+}
+
+.markdown-body hr {
+  border: none;
+  border-top: 1px solid hsl(var(--border));
+  margin: 1em 0;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--border));
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground));
+}
+
+/* Input textarea auto-resize animation */
+.input-area {
+  transition: height 0.1s ease;
+}
