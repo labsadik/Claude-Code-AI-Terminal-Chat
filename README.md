@@ -1,6 +1,6 @@
 # 🤖 Claude Code — AI Terminal Chat
 
-A professional, terminal-styled AI chat application built with React, TypeScript, and Lovable Cloud. Think Claude Code CLI — but in your browser.
+A professional, terminal-styled AI chat application built with React, TypeScript, and  Cloud. Think Claude Code CLI — but in your browser.
 
 ![Version](https://img.shields.io/badge/version-1.0-orange)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -115,7 +115,7 @@ src/
 supabase/
 └── functions/
     └── chat/
-        └── index.ts            # Edge function → Lovable AI Gateway
+        └── index.ts            # Edge function →  AI Gateway
 ```
 
 ---
@@ -155,9 +155,9 @@ conversations (1) ──→ (N) chat_messages
 | Frontend | React 18, TypeScript 5, Vite 5 |
 | Styling | Tailwind CSS v3, custom design tokens |
 | Markdown | react-markdown, remark-gfm, rehype-highlight |
-| Backend | Lovable Cloud (Supabase Edge Functions) |
-| Database | PostgreSQL (via Lovable Cloud) |
-| AI Models | Lovable AI Gateway (Gemini, GPT-5) |
+| Backend |  Cloud (Supabase Edge Functions) |
+| Database | PostgreSQL (via  Cloud) |
+| AI Models |  AI Gateway (Gemini, GPT-5) |
 | Fonts | JetBrains Mono, Inter |
 
 ---
