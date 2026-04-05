@@ -2,7 +2,7 @@
 
 A professional, terminal-styled AI chat application built with React, TypeScript, and Lovable Cloud. Think Claude Code CLI — but in your browser.
 
-![Version](https://img.shields.io/badge/version-3.0-orange)
+![Version](https://img.shields.io/badge/version-1.0-orange)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
 ---
