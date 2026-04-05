@@ -336,7 +336,7 @@ const TerminalChat = () => {
             </button>
             <div className={`w-2 h-2 rounded-full ${isLoading ? "bg-terminal-green animate-pulse" : "bg-accent"}`} />
             <span className="text-sm font-semibold tracking-tight font-mono">claude-code</span>
-            <span className="text-xs text-muted-foreground font-mono hidden sm:inline">v3.0</span>
+            <span className="text-xs text-muted-foreground font-mono hidden sm:inline">v1.0</span>
           </div>
           <div className="flex items-center gap-2">
             <StatsBar messages={messages} tokenCount={tokenCount} model={selectedModel} isLoading={isLoading} startTime={streamStartTime} />
@@ -414,7 +414,7 @@ const TerminalChat = () => {
                 </div>
 
                 <div className="flex items-center gap-4 text-[10px] text-muted-foreground/60 font-mono">
-                  <span>Powered by Lovable AI</span>
+                  <span>Powered by Labsadik</span>
                   <span>Type <code className="text-accent">/help</code> for commands</span>
                   <span>📎 Drag & drop files</span>
                 </div>
